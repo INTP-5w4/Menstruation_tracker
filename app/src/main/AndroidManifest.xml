@@ -2,25 +2,46 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Solo para el respaldo opcional en Google Drive. La app no usa analíticas ni anuncios. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <!--
+        Privacidad: allowBackup=false y reglas que excluyen todo, para que el sistema nunca copie
+        la base de datos sin cifrar. Los respaldos los gestiona la app, cifrados de extremo a extremo.
+    -->
     <application
-        android:allowBackup="true"
+        android:name=".App"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Andrés">
+        android:theme="@style/Theme.CycleTracker"
+        tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.main.MainActivity"
             android:exported="true"
+            android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".presentation.onboarding.PrivacyNoticeActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".worker.MedicationActionReceiver"
+            android:exported="false" />
     </application>
 
 </manifest>

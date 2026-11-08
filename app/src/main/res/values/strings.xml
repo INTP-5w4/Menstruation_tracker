@@ -1,3 +1,347 @@
 <resources>
-    <string name="app_name">Andrés</string>
+    <string name="app_name">Mi Ciclo</string>
+
+    <!-- Navegación -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_calendar">Calendario</string>
+    <string name="nav_log">Registro</string>
+    <string name="nav_meds">Medicinas</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Comunes -->
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Eliminar</string>
+    <string name="close">Cerrar</string>
+    <string name="accept">Aceptar</string>
+    <string name="continue_">Continuar</string>
+    <string name="edit">Editar</string>
+    <string name="not_set">Sin definir</string>
+    <string name="saved">Guardado</string>
+    <string name="today">Hoy</string>
+    <string name="choose_date">Elegir fecha</string>
+    <string name="days_value">%1$d días</string>
+    <plurals name="days">
+        <item quantity="one">%d día</item>
+        <item quantity="many">%d días</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+
+    <!-- Aviso de privacidad -->
+    <string name="privacy_title">Tu privacidad es lo primero</string>
+    <string name="privacy_subtitle">Lee este aviso antes de continuar</string>
+    <string name="privacy_body"><![CDATA[
+<b>1. Tus datos se quedan en tu teléfono.</b><br/>
+Mi Ciclo funciona sin cuentas, sin registro y sin servidores propios. Toda la información que registras (reglas, síntomas, medicamentos y relaciones sexuales) se guarda únicamente en este dispositivo.<br/><br/>
+<b>2. Cero rastreo.</b><br/>
+La app no contiene publicidad, analíticas, rastreadores ni SDKs de terceros que recojan datos. No vendemos ni compartimos información con nadie.<br/><br/>
+<b>3. Cifrado.</b><br/>
+Tus preferencias se guardan cifradas con AES-256 usando el almacén de claves seguro de Android. Los respaldos se cifran con AES-256-GCM usando una frase que solo tú conoces.<br/><br/>
+<b>4. Respaldo opcional en Google Drive.</b><br/>
+Si decides activarlo, la app sube un archivo cifrado a una carpeta oculta de tu propio Google Drive a la que solo esta app puede acceder. Google no puede leer su contenido y nosotros tampoco. Sin tu frase de respaldo, nadie (ni tú) puede recuperarlo.<br/><br/>
+<b>5. Notificaciones discretas.</b><br/>
+Los avisos no muestran detalles de salud en la pantalla de bloqueo.<br/><br/>
+<b>6. Tú tienes el control.</b><br/>
+Puedes exportar, restaurar o borrar todos tus datos en cualquier momento desde Ajustes. Si desinstalas la app, los datos locales se eliminan.<br/><br/>
+<b>7. Aviso médico.</b><br/>
+Las fechas de regla, ovulación y ventana fértil son <b>estimaciones aproximadas</b> basadas en tu historial. No son un método anticonceptivo ni sustituyen la consulta con un profesional de la salud. Los medicamentos hormonales pueden alterar tu ciclo y hacer las predicciones menos fiables.
+]]></string>
+    <string name="privacy_scroll_hint">Desplázate hasta el final para continuar</string>
+    <string name="privacy_checkbox">He leído y acepto el aviso de privacidad</string>
+    <string name="privacy_accept">Aceptar y continuar</string>
+    <string name="privacy_exit">Salir</string>
+
+    <!-- Bloqueo -->
+    <string name="lock_title">Mi Ciclo está bloqueada</string>
+    <string name="lock_subtitle">Desbloquea para ver tus datos</string>
+    <string name="lock_unlock">Desbloquear</string>
+    <string name="lock_prompt_title">Desbloquear Mi Ciclo</string>
+    <string name="lock_prompt_subtitle">Usa tu huella, rostro o el bloqueo de pantalla</string>
+    <string name="lock_unavailable">Configura un bloqueo de pantalla en el dispositivo para usar esta función</string>
+
+    <!-- Fases -->
+    <string name="phase_menstrual">Menstrual</string>
+    <string name="phase_follicular">Folicular</string>
+    <string name="phase_ovulation">Ovulación</string>
+    <string name="phase_luteal">Lútea</string>
+    <string name="phase_unknown">Sin datos</string>
+    <string name="phase_menstrual_desc">Tu cuerpo elimina el revestimiento del útero. Es normal sentir menos energía: descansa, hidrátate y usa calor local si hay cólicos.</string>
+    <string name="phase_follicular_desc">Los estrógenos suben y suele aumentar la energía y el ánimo. Buen momento para actividad física y nuevos proyectos.</string>
+    <string name="phase_ovulation_desc">Probable liberación de un óvulo. Es el momento de mayor fertilidad estimada; puedes notar flujo más transparente o mayor libido.</string>
+    <string name="phase_luteal_desc">La progesterona aumenta. Pueden aparecer síntomas premenstruales como hinchazón, sensibilidad o antojos.</string>
+    <string name="phase_unknown_desc">Registra el primer día de tu última regla para calcular tu ciclo.</string>
+
+    <string name="confidence_high">Predicción fiable</string>
+    <string name="confidence_medium">Predicción moderada</string>
+    <string name="confidence_low">Predicción aproximada</string>
+
+    <!-- Inicio -->
+    <string name="home_cycle_day">Día %1$d</string>
+    <string name="home_phase_label">Fase %1$s</string>
+    <string name="home_next_period">Próxima regla</string>
+    <string name="home_in_days">en %1$s</string>
+    <string name="home_today">podría empezar hoy</string>
+    <string name="home_late">retraso de %1$s</string>
+    <string name="home_period_ongoing">Regla en curso · día %1$d</string>
+    <string name="home_fertile_window">Ventana fértil</string>
+    <string name="home_ovulation">Ovulación estimada</string>
+    <string name="home_averages">Ciclo promedio: %1$d días · Regla: %2$d días</string>
+    <string name="home_averages_default">Usando valores por defecto: ciclo de %1$d días · regla de %2$d días</string>
+    <string name="home_btn_period_started">Mi regla empezó hoy</string>
+    <string name="home_btn_period_ended">Mi regla terminó hoy</string>
+    <string name="home_btn_other_date">Otra fecha</string>
+    <string name="home_btn_log_today">Registrar cómo me siento hoy</string>
+    <string name="home_empty_title">¡Bienvenida!</string>
+    <string name="home_empty_text">Registra el primer día de tu última regla para empezar a calcular tu ciclo.</string>
+    <string name="home_warning_meds">Tomas o tomaste recientemente un medicamento que puede alterar tu ciclo. Las predicciones podrían ser menos precisas.</string>
+    <string name="home_warning_irregular">Tus ciclos varían %1$d días entre sí. Las predicciones son orientativas; si la irregularidad persiste, considera consultarlo con un profesional.</string>
+    <string name="home_warning_late">Tu regla lleva %1$s de retraso. El estrés, viajes, cambios de peso o medicamentos pueden influir. Si te preocupa, consulta a un profesional.</string>
+    <string name="home_disclaimer">Estimaciones aproximadas. No es un método anticonceptivo.</string>
+    <string name="home_which_event">¿Qué ocurrió el %1$s?</string>
+    <string name="home_event_started">Empezó mi regla</string>
+    <string name="home_event_ended">Terminó mi regla</string>
+    <string name="home_today_summary">Hoy registraste: %1$s</string>
+    <string name="home_today_none">Aún no registras síntomas hoy</string>
+
+    <!-- Resultados de registro de regla -->
+    <string name="period_started">Inicio de regla registrado</string>
+    <string name="period_ended">Fin de regla registrado</string>
+    <string name="period_already">Esa fecha ya está dentro de una regla registrada</string>
+    <string name="period_too_close">Hay otra regla registrada muy cerca de esa fecha</string>
+    <string name="period_nothing_to_end">No hay una regla registrada antes de esa fecha</string>
+    <string name="period_end_before_start">La fecha de fin no puede ser anterior al inicio</string>
+    <string name="period_too_long">Una regla no suele durar más de 15 días. Revisa las fechas</string>
+    <string name="period_future">No puedes registrar fechas futuras</string>
+    <string name="period_updated">Regla actualizada</string>
+    <string name="period_deleted">Regla eliminada</string>
+
+    <!-- Calendario -->
+    <string name="cal_legend_period">Regla</string>
+    <string name="cal_legend_predicted">Regla prevista</string>
+    <string name="cal_legend_fertile">Fértil</string>
+    <string name="cal_legend_ovulation">Ovulación</string>
+    <string name="cal_history">Historial de reglas</string>
+    <string name="cal_history_empty">Aún no hay reglas registradas</string>
+    <string name="cal_history_ongoing">En curso</string>
+    <string name="cal_history_duration">Duración: %1$s</string>
+    <string name="cal_history_cycle">Ciclo: %1$s</string>
+    <string name="cal_future_day">Día futuro: %1$s</string>
+    <string name="cal_edit_period">Editar regla</string>
+    <string name="cal_start">Inicio</string>
+    <string name="cal_end">Fin</string>
+    <string name="cal_no_end">Sin fecha de fin</string>
+    <string name="cal_clear_end">Quitar fin</string>
+    <string name="cal_delete_confirm">¿Eliminar esta regla del historial?</string>
+    <string name="cal_stats">Ciclos registrados: %1$d · Variación: %2$d días</string>
+
+    <!-- Registro diario -->
+    <string name="log_title">Registro diario</string>
+    <string name="log_flow">Flujo</string>
+    <string name="log_symptoms">Síntomas</string>
+    <string name="log_mood">Estado de ánimo</string>
+    <string name="log_notes">Notas</string>
+    <string name="log_notes_hint">¿Algo más que quieras recordar?</string>
+    <string name="log_intimacy">Relaciones sexuales</string>
+    <string name="log_intimacy_empty">Sin registros este día</string>
+    <string name="log_intimacy_add">Añadir</string>
+    <string name="log_fertile_day">Este día está dentro de tu ventana fértil estimada</string>
+    <string name="log_suggest_start">Registraste flujo. ¿Marcar este día como inicio de regla?</string>
+    <string name="log_mark">Marcar</string>
+    <string name="log_cannot_future">No puedes registrar días futuros</string>
+
+    <string name="flow_none">Ninguno</string>
+    <string name="flow_spotting">Manchado</string>
+    <string name="flow_light">Ligero</string>
+    <string name="flow_medium">Medio</string>
+    <string name="flow_heavy">Abundante</string>
+
+    <string name="mood_none">Sin registrar</string>
+    <string name="mood_happy">Feliz</string>
+    <string name="mood_calm">Tranquila</string>
+    <string name="mood_energetic">Con energía</string>
+    <string name="mood_sensitive">Sensible</string>
+    <string name="mood_sad">Triste</string>
+    <string name="mood_irritable">Irritable</string>
+    <string name="mood_anxious">Ansiosa</string>
+
+    <string name="sym_cramps">Cólicos</string>
+    <string name="sym_headache">Dolor de cabeza</string>
+    <string name="sym_bloating">Hinchazón</string>
+    <string name="sym_breast">Senos sensibles</string>
+    <string name="sym_back">Dolor de espalda</string>
+    <string name="sym_fatigue">Cansancio</string>
+    <string name="sym_acne">Acné</string>
+    <string name="sym_nausea">Náuseas</string>
+    <string name="sym_cravings">Antojos</string>
+    <string name="sym_insomnia">Insomnio</string>
+    <string name="sym_diarrhea">Diarrea</string>
+    <string name="sym_constipation">Estreñimiento</string>
+    <string name="sym_discharge">Flujo vaginal</string>
+    <string name="sym_mood_swings">Cambios de humor</string>
+    <string name="sym_dizziness">Mareos</string>
+    <string name="sym_hot_flashes">Bochornos</string>
+    <string name="sym_low_libido">Libido baja</string>
+    <string name="sym_high_libido">Libido alta</string>
+
+    <string name="protection_none">Sin protección</string>
+    <string name="protection_condom">Condón</string>
+    <string name="protection_hormonal">Anticonceptivo hormonal</string>
+    <string name="protection_other">Otro método</string>
+    <string name="intimacy_dialog_title">Registrar relación</string>
+    <string name="intimacy_protection">Protección</string>
+    <string name="intimacy_delete_confirm">¿Eliminar este registro?</string>
+    <string name="intimacy_fertile_title">Ventana fértil</string>
+    <string name="intimacy_fertile_text">Este día estaba dentro de tu ventana fértil estimada y no se usó protección. Si no buscas un embarazo, la anticoncepción de emergencia es más eficaz cuanto antes se tome. Consulta a un profesional de la salud o farmacia.</string>
+
+    <!-- Medicamentos -->
+    <string name="meds_title">Mis medicamentos</string>
+    <string name="meds_empty">Añade los medicamentos que tomas para recibir recordatorios y llevar una bitácora.</string>
+    <string name="meds_history">Historial de tomas</string>
+    <string name="meds_history_empty">Aún no hay tomas registradas</string>
+    <string name="meds_take_now">Tomé ahora</string>
+    <string name="meds_alters_badge">Altera el ciclo</string>
+    <string name="meds_inactive">Inactivo</string>
+    <string name="meds_reminder_at">Recordatorio %1$s</string>
+    <string name="meds_add">Añadir medicamento</string>
+    <string name="meds_edit">Editar medicamento</string>
+    <string name="meds_name">Nombre</string>
+    <string name="meds_name_required">Escribe un nombre</string>
+    <string name="meds_dosage">Dosis (opcional)</string>
+    <string name="meds_category">Tipo</string>
+    <string name="meds_alters_cycle">Puede alterar mi ciclo</string>
+    <string name="meds_alters_cycle_hint">Los anticonceptivos hormonales, la píldora de emergencia y las terapias hormonales pueden cambiar la fecha de tu regla.</string>
+    <string name="meds_reminder">Recordatorio diario</string>
+    <string name="meds_reminder_time">Hora: %1$s</string>
+    <string name="meds_active">Lo tomo actualmente</string>
+    <string name="meds_notes">Notas (opcional)</string>
+    <string name="meds_delete_confirm">¿Eliminar %1$s y su historial de tomas?</string>
+    <string name="intake_logged">Toma registrada</string>
+    <string name="intake_delete_confirm">¿Eliminar esta toma del historial?</string>
+    <string name="intake_alters">altera el ciclo</string>
+    <string name="meds_notif_permission">Activa las notificaciones para recibir recordatorios</string>
+
+    <string name="cat_hormonal_contraceptive">Anticonceptivo hormonal</string>
+    <string name="cat_emergency_contraceptive">Anticoncepción de emergencia</string>
+    <string name="cat_hormone_therapy">Terapia hormonal</string>
+    <string name="cat_pain_relief">Analgésico</string>
+    <string name="cat_antibiotic">Antibiótico</string>
+    <string name="cat_supplement">Suplemento</string>
+    <string name="cat_other">Otro</string>
+
+    <!-- Ajustes -->
+    <string name="settings_cycle">Mi ciclo</string>
+    <string name="settings_cycle_length">Duración típica del ciclo</string>
+    <string name="settings_period_length">Duración típica de la regla</string>
+    <string name="settings_luteal_length">Duración de la fase lútea</string>
+    <string name="settings_cycle_hint">Se usan mientras no haya suficiente historial. Después, la app calcula tus promedios reales.</string>
+    <string name="settings_notifications">Notificaciones</string>
+    <string name="settings_phase_alerts">Avisos de cambio de fase y ventana fértil</string>
+    <string name="settings_period_alerts">Avisos de regla próxima o retrasada</string>
+    <string name="settings_discreet">Notificaciones discretas</string>
+    <string name="settings_discreet_hint">Oculta nombres de medicamentos y detalles del ciclo en el texto de la notificación</string>
+    <string name="settings_security">Privacidad y seguridad</string>
+    <string name="settings_app_lock">Bloquear la app</string>
+    <string name="settings_app_lock_hint">Pide huella, rostro o PIN del dispositivo al abrir</string>
+    <string name="settings_block_screenshots">Bloquear capturas de pantalla</string>
+    <string name="settings_block_screenshots_hint">También oculta la app en la vista de recientes</string>
+    <string name="settings_view_privacy">Ver aviso de privacidad</string>
+    <string name="settings_backup">Respaldo y transferencia</string>
+    <string name="settings_backup_hint">El archivo completo de tu base de datos se cifra en tu teléfono con AES-256-GCM antes de salir de él.</string>
+    <string name="settings_drive_connected">Google Drive conectado (carpeta oculta de la app)</string>
+    <string name="settings_drive_disconnected">Google Drive no conectado</string>
+    <string name="settings_drive_connect">Conectar Google Drive</string>
+    <string name="settings_drive_disconnect">Desconectar</string>
+    <string name="settings_passphrase">Frase de respaldo</string>
+    <string name="settings_passphrase_set">Configurada</string>
+    <string name="settings_passphrase_missing">No configurada</string>
+    <string name="settings_auto_backup">Respaldo automático diario</string>
+    <string name="settings_backup_now">Respaldar ahora</string>
+    <string name="settings_restore_drive">Restaurar desde Drive</string>
+    <string name="settings_export">Exportar archivo cifrado</string>
+    <string name="settings_import">Importar archivo cifrado</string>
+    <string name="settings_last_backup">Último respaldo: %1$s</string>
+    <string name="settings_last_backup_never">Último respaldo: nunca</string>
+    <string name="settings_last_error">Último error: %1$s</string>
+    <string name="settings_data">Mis datos</string>
+    <string name="settings_delete_all">Borrar todos mis datos</string>
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_version">Versión %1$s · Sin cuentas, sin anuncios, sin rastreo</string>
+
+    <string name="passphrase_title">Frase de respaldo</string>
+    <string name="passphrase_explain">Se usa para cifrar tus respaldos. Necesitarás esta misma frase para restaurarlos en otro teléfono. Si la olvidas, no hay forma de recuperar los respaldos.</string>
+    <string name="passphrase_hint">Frase (mínimo 8 caracteres)</string>
+    <string name="passphrase_confirm_hint">Repite la frase</string>
+    <string name="passphrase_too_short">Debe tener al menos 8 caracteres</string>
+    <string name="passphrase_mismatch">Las frases no coinciden</string>
+    <string name="passphrase_saved">Frase guardada de forma cifrada en este dispositivo</string>
+    <string name="passphrase_enter_title">Introduce tu frase de respaldo</string>
+    <string name="passphrase_enter_explain">Es la frase que configuraste al crear el respaldo.</string>
+
+    <string name="backup_in_progress">Procesando…</string>
+    <string name="backup_done">Respaldo cifrado subido a Google Drive</string>
+    <string name="backup_exported">Archivo cifrado exportado</string>
+    <string name="backup_found_title">Respaldo encontrado</string>
+    <string name="backup_found_text">Hay un respaldo en tu Google Drive del %1$s. ¿Quieres restaurarlo? Se reemplazarán los datos de este teléfono.</string>
+    <string name="backup_not_found">No se encontró ningún respaldo en Google Drive</string>
+    <string name="restore">Restaurar</string>
+    <string name="restore_confirm_title">¿Restaurar datos?</string>
+    <string name="restore_confirm_text">Los datos actuales de este teléfono se reemplazarán por los del respaldo. La app se reiniciará.</string>
+    <string name="restore_done">Datos restaurados. La app se reiniciará.</string>
+    <string name="drive_connected">Google Drive conectado</string>
+    <string name="drive_connect_failed">No se pudo conectar con Google Drive: %1$s</string>
+    <string name="drive_disconnected">Google Drive desconectado</string>
+    <string name="drive_disconnect_confirm">¿Desconectar Google Drive? También puedes borrar el respaldo guardado allí.</string>
+    <string name="drive_disconnect_and_delete">Desconectar y borrar respaldo</string>
+    <string name="drive_need_passphrase">Configura primero una frase de respaldo</string>
+    <string name="drive_need_connection">Conecta primero Google Drive</string>
+
+    <string name="err_needs_auth">Vuelve a autorizar Google Drive</string>
+    <string name="err_no_passphrase">Falta configurar la frase de respaldo</string>
+    <string name="err_wrong_passphrase">Frase incorrecta o archivo alterado</string>
+    <string name="err_not_found">No se encontró el respaldo</string>
+    <string name="err_network">Sin conexión. Inténtalo más tarde</string>
+    <string name="err_invalid_file">El archivo no es un respaldo válido de Mi Ciclo</string>
+    <string name="err_incompatible">El respaldo es de una versión más nueva. Actualiza la app</string>
+    <string name="err_unknown">Ocurrió un error: %1$s</string>
+
+    <string name="delete_all_title">¿Borrar todos tus datos?</string>
+    <string name="delete_all_text">Se eliminarán reglas, síntomas, medicamentos, relaciones y ajustes de este teléfono. Esta acción no se puede deshacer.\n\nEscribe BORRAR para confirmar.</string>
+    <string name="delete_all_keyword">BORRAR</string>
+    <string name="delete_all_drive_too">Borrar también el respaldo de Google Drive</string>
+    <string name="delete_all_done">Todos tus datos fueron eliminados</string>
+
+    <!-- Notificaciones -->
+    <string name="channel_meds">Recordatorios de medicamentos</string>
+    <string name="channel_meds_desc">Avisos diarios para tomar tus medicamentos</string>
+    <string name="channel_cycle">Alertas del ciclo</string>
+    <string name="channel_cycle_desc">Cambios de fase, ventana fértil y regla próxima</string>
+    <string name="channel_backup">Respaldo</string>
+    <string name="notif_public_text">Tienes un recordatorio</string>
+    <string name="notif_generic_title">Recordatorio</string>
+    <string name="notif_generic_text">Abre la app para ver los detalles</string>
+    <string name="notif_med_title">Hora de tu medicamento</string>
+    <string name="notif_med_text">Recuerda tomar %1$s</string>
+    <string name="notif_med_text_discreet">Tienes un recordatorio pendiente</string>
+    <string name="notif_med_action_taken">Ya la tomé</string>
+    <string name="notif_phase_title">Entraste en fase %1$s</string>
+    <string name="notif_fertile_title">Empieza tu ventana fértil estimada</string>
+    <string name="notif_fertile_text">Durante los próximos días la probabilidad de embarazo es mayor.</string>
+    <string name="notif_period_soon_title">Tu regla se acerca</string>
+    <plurals name="notif_period_soon_text">
+        <item quantity="one">Podría llegar mañana. ¿Llevas lo necesario?</item>
+        <item quantity="many">Podría llegar en %d días. ¿Llevas lo necesario?</item>
+        <item quantity="other">Podría llegar en %d días. ¿Llevas lo necesario?</item>
+    </plurals>
+    <string name="notif_period_today_title">Tu regla podría empezar hoy</string>
+    <string name="notif_period_today_text">Cuando llegue, regístrala con un toque en la app.</string>
+    <string name="notif_period_late_title">Tu regla se ha retrasado</string>
+    <plurals name="notif_period_late_text">
+        <item quantity="one">Llevas %d día de retraso según tu promedio.</item>
+        <item quantity="many">Llevas %d días de retraso según tu promedio.</item>
+        <item quantity="other">Llevas %d días de retraso según tu promedio.</item>
+    </plurals>
+    <string name="notif_backup_title">Respaldo no realizado</string>
+    <string name="notif_backup_reauth">Abre la app y vuelve a conectar Google Drive para seguir respaldando tus datos.</string>
+    <string name="notif_backup_no_passphrase">Configura tu frase de respaldo en Ajustes.</string>
+    <string name="notif_permission_rationale">Las notificaciones te recuerdan tus medicamentos y te avisan de tu regla. Nunca muestran detalles en la pantalla de bloqueo.</string>
 </resources>

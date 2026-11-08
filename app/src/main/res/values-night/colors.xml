@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_primary">#FFB1C4</color>
+    <color name="md_on_primary">#5E1130</color>
+    <color name="md_primary_container">#7C2643</color>
+    <color name="md_on_primary_container">#FFD9E1</color>
+    <color name="md_secondary">#E4BDC4</color>
+    <color name="md_on_secondary">#43292F</color>
+    <color name="md_secondary_container">#5B3F45</color>
+    <color name="md_on_secondary_container">#FFD9E1</color>
+    <color name="md_tertiary">#EEBD92</color>
+    <color name="md_on_tertiary">#472A0A</color>
+    <color name="md_tertiary_container">#61401E</color>
+    <color name="md_on_tertiary_container">#FFDCBE</color>
+    <color name="md_error">#FFB4AB</color>
+    <color name="md_error_container">#93000A</color>
+    <color name="md_on_error_container">#FFDAD6</color>
+    <color name="md_background">#191113</color>
+    <color name="md_on_background">#EFDFE1</color>
+    <color name="md_surface">#191113</color>
+    <color name="md_on_surface">#EFDFE1</color>
+    <color name="md_surface_variant">#524346</color>
+    <color name="md_on_surface_variant">#D6C2C5</color>
+    <color name="md_outline">#9F8C8F</color>
+    <color name="md_surface_container">#261D1F</color>
+
+    <color name="phase_menstrual">#F07A8E</color>
+    <color name="phase_follicular">#6CC5C2</color>
+    <color name="phase_ovulation">#F2B95A</color>
+    <color name="phase_luteal">#B396E0</color>
+    <color name="day_predicted_period">#5C2633</color>
+    <color name="day_fertile">#4D3A17</color>
+    <color name="day_on_predicted">#FFD9E1</color>
+    <color name="day_on_fertile">#FFE3B5</color>
+    <color name="ring_track">#3A2E31</color>
+    <color name="warning_container">#4A3A12</color>
+    <color name="on_warning_container">#FFE3A8</color>
+</resources>

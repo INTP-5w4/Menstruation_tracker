@@ -2,4 +2,47 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Marca -->
+    <color name="brand_primary">#9C3D5A</color>
+    <color name="brand_launcher_bg">#9C3D5A</color>
+
+    <!-- Paleta Material 3 (claro) -->
+    <color name="md_primary">#9C3D5A</color>
+    <color name="md_on_primary">#FFFFFF</color>
+    <color name="md_primary_container">#FFD9E1</color>
+    <color name="md_on_primary_container">#3F0018</color>
+    <color name="md_secondary">#75565D</color>
+    <color name="md_on_secondary">#FFFFFF</color>
+    <color name="md_secondary_container">#FFD9E1</color>
+    <color name="md_on_secondary_container">#2B151A</color>
+    <color name="md_tertiary">#7B5733</color>
+    <color name="md_on_tertiary">#FFFFFF</color>
+    <color name="md_tertiary_container">#FFDCBE</color>
+    <color name="md_on_tertiary_container">#2D1600</color>
+    <color name="md_error">#BA1A1A</color>
+    <color name="md_error_container">#FFDAD6</color>
+    <color name="md_on_error_container">#410002</color>
+    <color name="md_background">#FFF8F8</color>
+    <color name="md_on_background">#22191B</color>
+    <color name="md_surface">#FFF8F8</color>
+    <color name="md_on_surface">#22191B</color>
+    <color name="md_surface_variant">#F3DDE1</color>
+    <color name="md_on_surface_variant">#524346</color>
+    <color name="md_outline">#847376</color>
+    <color name="md_surface_container">#F9EBEE</color>
+
+    <!-- Fases del ciclo -->
+    <color name="phase_menstrual">#D9475F</color>
+    <color name="phase_follicular">#3E9C9A</color>
+    <color name="phase_ovulation">#E09B2D</color>
+    <color name="phase_luteal">#8A67BE</color>
+    <color name="phase_unknown">#9E9E9E</color>
+    <color name="day_predicted_period">#F7C6CF</color>
+    <color name="day_fertile">#FBE3B9</color>
+    <color name="day_on_predicted">#7A1F33</color>
+    <color name="day_on_fertile">#6B4A12</color>
+    <color name="ring_track">#F0E1E4</color>
+    <color name="warning_container">#FFF1D6</color>
+    <color name="on_warning_container">#5A3D00</color>
 </resources>
